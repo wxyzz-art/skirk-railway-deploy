@@ -9,5 +9,4 @@ RUN apk add --no-cache ca-certificates
 COPY --from=build /out/skirk /usr/local/bin/skirk
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
-VOLUME /data
 ENTRYPOINT ["/entrypoint.sh"]
